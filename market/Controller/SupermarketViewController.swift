@@ -12,15 +12,10 @@ class SupermarketViewController: UIViewController, UICollectionViewDataSource,
                                UICollectionViewDelegateFlowLayout {
     
     let reuseIdentifier = "productCell"
-    var actualCell: IndexPath!
-    let supermarket = Supermarket();
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
-    }
+    let supermarket = Supermarket()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (section == 0) ? supermarket.numberOfProductInSupermarket() : supermarket.numberOfProductInSupermarket()
+        return supermarket.numberOfProductInSupermarket()
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -34,7 +29,9 @@ class SupermarketViewController: UIViewController, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        actualCell = indexPath
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "detailVC") as! ProductDetailsViewController
+        detailVC.product = supermarket.productNameByPosition(indexPath: indexPath)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -63,11 +60,12 @@ class SupermarketViewController: UIViewController, UICollectionViewDataSource,
         return 10
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is ProductDetailsViewController {
             let destination = segue.destination as! ProductDetailsViewController
-            destination.product = supermarket.productNameByPosition(indexPath: actualCell)
+            destination.product = product
         }
-    }
+    }*/
+    
 }
 

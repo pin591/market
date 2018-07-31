@@ -1,6 +1,6 @@
 //
 //  ProductDetailsViewController.swift
-//  Supermarket
+//  market
 //
 //  Created by Ana Rebollo Pin on 30/7/18.
 //  Copyright © 2018 Ana Rebollo Pin. All rights reserved.
@@ -20,6 +20,7 @@ class ProductDetailsViewController: UIViewController {
         super.viewDidLoad()
         detailImage.image = UIImage(named:product.name)
         detailTitle.text = product.name
+        detaildescription.text = "Hola que tal estas por ahi"
     }
 
     override func didReceiveMemoryWarning() {

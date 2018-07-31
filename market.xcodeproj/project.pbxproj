@@ -11,7 +11,6 @@
 		929701A520B5963C00753D51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929701A420B5963C00753D51 /* AppDelegate.swift */; };
 		929701A720B5963C00753D51 /* SupermarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929701A620B5963C00753D51 /* SupermarketViewController.swift */; };
 		929701AA20B5963C00753D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929701A820B5963C00753D51 /* Main.storyboard */; };
-		929701AD20B5963C00753D51 /* wikiPlant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 929701AB20B5963C00753D51 /* wikiPlant.xcdatamodeld */; };
 		929701AF20B5963F00753D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929701AE20B5963F00753D51 /* Assets.xcassets */; };
 		929701BA20B5966E00753D51 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929701B920B5966E00753D51 /* ProductCell.swift */; };
 		929701BC20B5980A00753D51 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929701BB20B5980A00753D51 /* Product.swift */; };
@@ -35,7 +34,6 @@
 		929701A420B5963C00753D51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		929701A620B5963C00753D51 /* SupermarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupermarketViewController.swift; sourceTree = "<group>"; };
 		929701A920B5963C00753D51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		929701AC20B5963C00753D51 /* wikiPlant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wikiPlant.xcdatamodel; sourceTree = "<group>"; };
 		929701AE20B5963F00753D51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		929701B320B5963F00753D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929701B920B5966E00753D51 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
@@ -81,8 +79,9 @@
 		929701A320B5963C00753D51 /* market */ = {
 			isa = PBXGroup;
 			children = (
-				929701BF20B59A9B00753D51 /* UI */,
-				929701BE20B599B400753D51 /* DB */,
+				929701C020B59AD400753D51 /* Controller */,
+				929701C120B59AE400753D51 /* View */,
+				929701BD20B5990600753D51 /* Model */,
 				929701AE20B5963F00753D51 /* Assets.xcassets */,
 				929701A420B5963C00753D51 /* AppDelegate.swift */,
 				929701B320B5963F00753D51 /* Info.plist */,
@@ -97,24 +96,6 @@
 				92B4EA5520D509E700644918 /* Supermarket.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		929701BE20B599B400753D51 /* DB */ = {
-			isa = PBXGroup;
-			children = (
-				929701AB20B5963C00753D51 /* wikiPlant.xcdatamodeld */,
-			);
-			path = DB;
-			sourceTree = "<group>";
-		};
-		929701BF20B59A9B00753D51 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				929701C120B59AE400753D51 /* View */,
-				929701C020B59AD400753D51 /* Controller */,
-				929701BD20B5990600753D51 /* Model */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		929701C020B59AD400753D51 /* Controller */ = {
@@ -244,7 +225,6 @@
 			files = (
 				929701BC20B5980A00753D51 /* Product.swift in Sources */,
 				929701A720B5963C00753D51 /* SupermarketViewController.swift in Sources */,
-				929701AD20B5963C00753D51 /* wikiPlant.xcdatamodeld in Sources */,
 				92B4EA5620D509E700644918 /* Supermarket.swift in Sources */,
 				929701BA20B5966E00753D51 /* ProductCell.swift in Sources */,
 				9241F35620BB4D5F00ED4208 /* ProductDetailsViewController.swift in Sources */,
@@ -495,19 +475,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		929701AB20B5963C00753D51 /* wikiPlant.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				929701AC20B5963C00753D51 /* wikiPlant.xcdatamodel */,
-			);
-			currentVersion = 929701AC20B5963C00753D51 /* wikiPlant.xcdatamodel */;
-			path = wikiPlant.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 9297019920B5963C00753D51 /* Project object */;
 }

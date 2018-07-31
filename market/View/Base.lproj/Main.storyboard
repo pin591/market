@@ -60,7 +60,6 @@
                                         <connections>
                                             <outlet property="productImage" destination="KVS-uw-RcL" id="Fe1-ul-D7c"/>
                                             <outlet property="productTitle" destination="5bY-vC-Cqb" id="NXG-up-QBq"/>
-                                            <segue destination="xtQ-C2-Ol6" kind="show" id="55I-rH-voS"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -90,27 +89,28 @@
         <!--Product Details View Controller-->
         <scene sceneID="Dtd-SA-zwt">
             <objects>
-                <viewController id="xtQ-C2-Ol6" customClass="ProductDetailsViewController" customModule="market" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" id="xtQ-C2-Ol6" customClass="ProductDetailsViewController" customModule="market" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Oq-Ps-PYD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hBK-Ul-aDF">
-                                <rect key="frame" x="0.0" y="88" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Gtp-6K-rK8"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O74-bJ-Yne">
-                                <rect key="frame" x="166.66666666666666" y="255" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O74-bJ-Yne">
+                                <rect key="frame" x="19.999999999999993" y="211" width="90.333333333333314" height="21"/>
+                                <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zQc-Fl-lD1">
-                                <rect key="frame" x="15" y="336" width="345" height="160"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <rect key="frame" x="15" y="292" width="345" height="204"/>
+                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -121,7 +121,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="O74-bJ-Yne" firstAttribute="centerX" secondItem="JBg-qX-P6Y" secondAttribute="centerX" id="3Ly-ZA-5oj"/>
                             <constraint firstItem="zQc-Fl-lD1" firstAttribute="leading" secondItem="JBg-qX-P6Y" secondAttribute="leading" constant="15" id="4Gp-k7-S0m"/>
                             <constraint firstItem="JBg-qX-P6Y" firstAttribute="trailing" secondItem="hBK-Ul-aDF" secondAttribute="trailing" id="BsP-cw-ij9"/>
                             <constraint firstItem="vzV-LE-lsY" firstAttribute="top" secondItem="zQc-Fl-lD1" secondAttribute="bottom" constant="148" id="GYe-eq-iFM"/>
@@ -132,6 +131,7 @@
                             <constraint firstItem="hBK-Ul-aDF" firstAttribute="leading" secondItem="JBg-qX-P6Y" secondAttribute="leading" id="YoL-xV-vdg"/>
                             <constraint firstItem="JBg-qX-P6Y" firstAttribute="trailing" secondItem="zQc-Fl-lD1" secondAttribute="trailing" constant="15" id="d6b-nm-92p"/>
                             <constraint firstItem="hBK-Ul-aDF" firstAttribute="top" secondItem="JBg-qX-P6Y" secondAttribute="top" id="fMR-1s-MPb"/>
+                            <constraint firstItem="O74-bJ-Yne" firstAttribute="leading" secondItem="JBg-qX-P6Y" secondAttribute="leading" constant="20" id="ua4-ta-vor"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JBg-qX-P6Y"/>
                     </view>
@@ -143,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zy1-ru-xGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-873" y="-409"/>
+            <point key="canvasLocation" x="-1145" y="-409"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h7v-lb-ok5">
